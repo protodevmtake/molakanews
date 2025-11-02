@@ -1,0 +1,19 @@
+installation:
+  version: 6.0.0-alpha.3
+  installDate: '2025-11-02T09:15:18.776Z'
+  lastUpdated: '2025-11-02T09:15:18.776Z'
+modules:
+  - core
+  - bmb
+  - bmm
+  - cis
+ides:
+  - codex
+  - cursor
+  - gemini
+  - github-copilot
+  - opencode
+  - windsurf
+  - crush
+  - iflow
+  - qwen
