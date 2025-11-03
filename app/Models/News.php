@@ -1,15 +1,20 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
+use Database\Factories\NewsFactory;use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
 
 /**
  * @mixin IdeHelperNews
  */
-class News extends Model
+final class News extends Model
 {
+    /** @use HasFactory<NewsFactory> */
+    use HasFactory;
     use Searchable;
 
     /**
