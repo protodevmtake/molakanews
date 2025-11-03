@@ -1,5 +1,4 @@
 {
-    "$schema": "https://getcomposer.org/schema.json",
     "name": "laravel/react-starter-kit",
     "type": "project",
     "description": "News website offers a comprehensive overview of current events, featuring top stories, international news, and sports.",

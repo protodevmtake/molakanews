@@ -9,8 +9,12 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Spinner } from '@/components/ui/spinner';
 import AuthLayout from '@/layouts/auth-layout';
+import { Eye, EyeOff } from 'lucide-react';
+import { useState } from 'react';
 
 export default function Register() {
+    const [showPassword, setShowPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     return (
         <AuthLayout
             title="Create an account"
@@ -60,15 +64,47 @@ export default function Register() {
 
                             <div className="grid gap-2">
                                 <Label htmlFor="password">Password</Label>
-                                <Input
-                                    id="password"
-                                    type="password"
-                                    required
-                                    tabIndex={3}
-                                    autoComplete="new-password"
-                                    name="password"
-                                    placeholder="Password"
-                                />
+                                <div className="relative">
+                                    <Input
+                                        id="password"
+                                        type={
+                                            showPassword ? 'text' : 'password'
+                                        }
+                                        required
+                                        tabIndex={3}
+                                        autoComplete="new-password"
+                                        name="password"
+                                        placeholder="Password"
+                                        className="pr-10"
+                                        aria-describedby="password-help"
+                                    />
+                                    <Button
+                                        type="button"
+                                        variant="ghost"
+                                        size="icon"
+                                        tabIndex={3}
+                                        className="absolute top-0 right-0 h-9 w-9 cursor-pointer text-muted-foreground"
+                                        onClick={() =>
+                                            setShowPassword((v) => !v)
+                                        }
+                                        aria-label={
+                                            showPassword
+                                                ? 'Hide password'
+                                                : 'Show password'
+                                        }
+                                        title={
+                                            showPassword
+                                                ? 'Hide password'
+                                                : 'Show password'
+                                        }
+                                    >
+                                        {showPassword ? (
+                                            <EyeOff aria-hidden="true" />
+                                        ) : (
+                                            <Eye aria-hidden="true" />
+                                        )}
+                                    </Button>
+                                </div>
                                 <InputError message={errors.password} />
                             </div>
 
@@ -76,15 +112,49 @@ export default function Register() {
                                 <Label htmlFor="password_confirmation">
                                     Confirm password
                                 </Label>
-                                <Input
-                                    id="password_confirmation"
-                                    type="password"
-                                    required
-                                    tabIndex={4}
-                                    autoComplete="new-password"
-                                    name="password_confirmation"
-                                    placeholder="Confirm password"
-                                />
+                                <div className="relative">
+                                    <Input
+                                        id="password_confirmation"
+                                        type={
+                                            showConfirmPassword
+                                                ? 'text'
+                                                : 'password'
+                                        }
+                                        required
+                                        tabIndex={4}
+                                        autoComplete="new-password"
+                                        name="password_confirmation"
+                                        placeholder="Confirm password"
+                                        className="pr-10"
+                                        aria-describedby="password-confirmation-help"
+                                    />
+                                    <Button
+                                        type="button"
+                                        variant="ghost"
+                                        size="icon"
+                                        tabIndex={4}
+                                        className="absolute top-0 right-0 h-9 w-9 cursor-pointer text-muted-foreground"
+                                        onClick={() =>
+                                            setShowConfirmPassword((v) => !v)
+                                        }
+                                        aria-label={
+                                            showConfirmPassword
+                                                ? 'Hide password'
+                                                : 'Show password'
+                                        }
+                                        title={
+                                            showConfirmPassword
+                                                ? 'Hide password'
+                                                : 'Show password'
+                                        }
+                                    >
+                                        {showConfirmPassword ? (
+                                            <EyeOff aria-hidden="true" />
+                                        ) : (
+                                            <Eye aria-hidden="true" />
+                                        )}
+                                    </Button>
+                                </div>
                                 <InputError
                                     message={errors.password_confirmation}
                                 />

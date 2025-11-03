@@ -6724,16 +6724,16 @@
         },
         {
             "name": "spatie/laravel-medialibrary",
-            "version": "11.17.0",
+            "version": "11.17.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-medialibrary.git",
-                "reference": "0d58f3184d6449e3173ee3e44b29dc5ff7425d71"
+                "reference": "3e535836da341776b1616002eb9e2a5776fa9a4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-medialibrary/zipball/0d58f3184d6449e3173ee3e44b29dc5ff7425d71",
-                "reference": "0d58f3184d6449e3173ee3e44b29dc5ff7425d71",
+                "url": "https://api.github.com/repos/spatie/laravel-medialibrary/zipball/3e535836da341776b1616002eb9e2a5776fa9a4d",
+                "reference": "3e535836da341776b1616002eb9e2a5776fa9a4d",
                 "shasum": ""
             },
             "require": {
@@ -6752,7 +6752,7 @@
                 "spatie/image": "^3.3.2",
                 "spatie/laravel-package-tools": "^1.16.1",
                 "spatie/temporary-directory": "^2.2",
-                "symfony/console": "^6.4.1|^7.0"
+                "symfony/console": "^6.4.1|^7.0|^8.0"
             },
             "conflict": {
                 "php-ffmpeg/php-ffmpeg": "<0.6.1"
@@ -6818,7 +6818,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-medialibrary/issues",
-                "source": "https://github.com/spatie/laravel-medialibrary/tree/11.17.0"
+                "source": "https://github.com/spatie/laravel-medialibrary/tree/11.17.2"
             },
             "funding": [
                 {
@@ -6830,7 +6830,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-10-22T08:01:45+00:00"
+            "time": "2025-11-03T08:29:05+00:00"
         },
         {
             "name": "spatie/laravel-package-tools",
@@ -11699,16 +11699,16 @@
         },
         {
             "name": "larastan/larastan",
-            "version": "v3.7.2",
+            "version": "v3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/larastan/larastan.git",
-                "reference": "a761859a7487bd7d0cb8b662a7538a234d5bb5ae"
+                "reference": "d13ef96d652d1b2a8f34f1760ba6bf5b9c98112e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/larastan/larastan/zipball/a761859a7487bd7d0cb8b662a7538a234d5bb5ae",
-                "reference": "a761859a7487bd7d0cb8b662a7538a234d5bb5ae",
+                "url": "https://api.github.com/repos/larastan/larastan/zipball/d13ef96d652d1b2a8f34f1760ba6bf5b9c98112e",
+                "reference": "d13ef96d652d1b2a8f34f1760ba6bf5b9c98112e",
                 "shasum": ""
             },
             "require": {
@@ -11722,7 +11722,7 @@
                 "illuminate/pipeline": "^11.44.2 || ^12.4.1",
                 "illuminate/support": "^11.44.2 || ^12.4.1",
                 "php": "^8.2",
-                "phpstan/phpstan": "^2.1.28"
+                "phpstan/phpstan": "^2.1.29"
             },
             "require-dev": {
                 "doctrine/coding-standard": "^13",
@@ -11735,7 +11735,8 @@
                 "phpunit/phpunit": "^10.5.35 || ^11.5.15"
             },
             "suggest": {
-                "orchestra/testbench": "Using Larastan for analysing a package needs Testbench"
+                "orchestra/testbench": "Using Larastan for analysing a package needs Testbench",
+                "phpmyadmin/sql-parser": "Install to enable Larastan's optional phpMyAdmin-based SQL parser automatically"
             },
             "type": "phpstan-extension",
             "extra": {
@@ -11776,7 +11777,7 @@
             ],
             "support": {
                 "issues": "https://github.com/larastan/larastan/issues",
-                "source": "https://github.com/larastan/larastan/tree/v3.7.2"
+                "source": "https://github.com/larastan/larastan/tree/v3.8.0"
             },
             "funding": [
                 {
@@ -11784,7 +11785,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-09-19T09:03:05+00:00"
+            "time": "2025-10-27T23:09:14+00:00"
         },
         {
             "name": "laravel/boost",
@@ -13074,27 +13075,27 @@
         },
         {
             "name": "pestphp/pest-plugin-type-coverage",
-            "version": "v4.0.2",
+            "version": "v4.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pestphp/pest-plugin-type-coverage.git",
-                "reference": "d7701b0b6d4412ad77eeda62ed266bdb9212d62d"
+                "reference": "123bbf73d4b790373600132f503fd8d1453d40bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pestphp/pest-plugin-type-coverage/zipball/d7701b0b6d4412ad77eeda62ed266bdb9212d62d",
-                "reference": "d7701b0b6d4412ad77eeda62ed266bdb9212d62d",
+                "url": "https://api.github.com/repos/pestphp/pest-plugin-type-coverage/zipball/123bbf73d4b790373600132f503fd8d1453d40bb",
+                "reference": "123bbf73d4b790373600132f503fd8d1453d40bb",
                 "shasum": ""
             },
             "require": {
                 "nunomaduro/pokio": "^0.1.1",
                 "pestphp/pest-plugin": "^4.0.0",
                 "php": "^8.3",
-                "phpstan/phpstan": "^1.12.24|^2.1.22",
+                "phpstan/phpstan": "^1.12.24|^2.1.31",
                 "tomasvotruba/type-coverage": "^1.0.0|^2.0.2"
             },
             "require-dev": {
-                "pestphp/pest": "^4.0.0",
+                "pestphp/pest": "^4.1.3",
                 "pestphp/pest-dev-tools": "^4.0.0"
             },
             "type": "library",
@@ -13127,7 +13128,7 @@
                 "unit"
             ],
             "support": {
-                "source": "https://github.com/pestphp/pest-plugin-type-coverage/tree/v4.0.2"
+                "source": "https://github.com/pestphp/pest-plugin-type-coverage/tree/v4.0.3"
             },
             "funding": [
                 {
@@ -13139,7 +13140,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-21T09:44:31+00:00"
+            "time": "2025-11-02T23:10:59+00:00"
         },
         {
             "name": "phar-io/manifest",

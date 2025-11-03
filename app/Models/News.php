@@ -5,6 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
 
+/**
+ * @mixin IdeHelperNews
+ */
 class News extends Model
 {
     use Searchable;

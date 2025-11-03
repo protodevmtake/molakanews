@@ -1,6 +1,5 @@
-import ProfileController from '@/actions/App/Http/Controllers/Settings/ProfileController';
+import { destroy } from '@/actions/App/Http/Controllers/Settings/ProfileController';
 import HeadingSmall from '@/components/heading-small';
-import InputError from '@/components/input-error';
 import { Button } from '@/components/ui/button';
 import {
     Dialog,
@@ -11,14 +10,9 @@ import {
     DialogTitle,
     DialogTrigger,
 } from '@/components/ui/dialog';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import { Form } from '@inertiajs/react';
-import { useRef } from 'react';
 
 export default function DeleteUser() {
-    const passwordInput = useRef<HTMLInputElement>(null);
-
     return (
         <div className="space-y-6">
             <HeadingSmall
@@ -35,12 +29,7 @@ export default function DeleteUser() {
 
                 <Dialog>
                     <DialogTrigger asChild>
-                        <Button
-                            variant="destructive"
-                            data-test="delete-user-button"
-                        >
-                            Delete account
-                        </Button>
+                        <Button variant="destructive">Delete account</Button>
                     </DialogTrigger>
                     <DialogContent>
                         <DialogTitle>
@@ -49,41 +38,19 @@ export default function DeleteUser() {
                         <DialogDescription>
                             Once your account is deleted, all of its resources
                             and data will also be permanently deleted. Please
-                            enter your password to confirm you would like to
-                            permanently delete your account.
+                            confirm you would like to permanently delete your
+                            account.
                         </DialogDescription>
-
                         <Form
-                            {...ProfileController.destroy.form()}
+                            {...destroy.form()}
                             options={{
                                 preserveScroll: true,
                             }}
-                            onError={() => passwordInput.current?.focus()}
                             resetOnSuccess
                             className="space-y-6"
                         >
-                            {({ resetAndClearErrors, processing, errors }) => (
+                            {({ resetAndClearErrors, processing }) => (
                                 <>
-                                    <div className="grid gap-2">
-                                        <Label
-                                            htmlFor="password"
-                                            className="sr-only"
-                                        >
-                                            Password
-                                        </Label>
-
-                                        <Input
-                                            id="password"
-                                            type="password"
-                                            name="password"
-                                            ref={passwordInput}
-                                            placeholder="Password"
-                                            autoComplete="current-password"
-                                        />
-
-                                        <InputError message={errors.password} />
-                                    </div>
-
                                     <DialogFooter className="gap-2">
                                         <DialogClose asChild>
                                             <Button
@@ -101,10 +68,7 @@ export default function DeleteUser() {
                                             disabled={processing}
                                             asChild
                                         >
-                                            <button
-                                                type="submit"
-                                                data-test="confirm-delete-user-button"
-                                            >
+                                            <button type="submit">
                                                 Delete account
                                             </button>
                                         </Button>

@@ -14,6 +14,31 @@
 namespace App\Models{
 /**
  * @property int $id
+ * @property string $title
+ * @property string $content
+ * @property string|null $author
+ * @property \Illuminate\Support\Carbon|null $published_at
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|News newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|News newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|News query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|News whereAuthor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|News whereContent($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|News whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|News whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|News wherePublishedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|News whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|News whereUpdatedAt($value)
+ * @mixin \Eloquent
+ */
+	#[\AllowDynamicProperties]
+	class IdeHelperNews {}
+}
+
+namespace App\Models{
+/**
+ * @property int $id
  * @property string $name
  * @property string $email
  * @property \Illuminate\Support\Carbon|null $email_verified_at
