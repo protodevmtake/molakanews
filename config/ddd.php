@@ -114,7 +114,7 @@ return [
     | package to work with.
     |
     */
-    'base_dto' => \Spatie\LaravelData\Data::class,
+    'base_dto' => Spatie\LaravelData\Data::class,
 
     /*
     |--------------------------------------------------------------------------

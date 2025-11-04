@@ -7,7 +7,10 @@ return [
      */
 
     'auto_discover_types' => [
-        app_path(),
+       "src/Domain",
+        "src/Infrastructure",
+        "src/Integrations",
+        "src/Support",
     ],
 
     /*
